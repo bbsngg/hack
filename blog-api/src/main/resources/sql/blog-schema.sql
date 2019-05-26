@@ -146,6 +146,12 @@ CREATE TABLE `sys_user` (
   `password` varchar(64) DEFAULT NULL,
   `salt` varchar(255) DEFAULT NULL,
   `status` varchar(255) DEFAULT NULL,
+
+  `school` varchar(255) DEFAULT NULL,
+  `grade` varchar(255) DEFAULT NULL,
+  `QQ` varchar(20) DEFAULT NULL,
+  `wechat` varchar(255) DEFAULT NULL,
+
   PRIMARY KEY (`id`),
   UNIQUE KEY `UK_awpog86ljqwb89aqa1c5gvdrd` (`account`),
   UNIQUE KEY `UK_ahtq5ew3v0kt1n7hf1sgp7p8l` (`email`)

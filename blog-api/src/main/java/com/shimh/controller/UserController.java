@@ -134,4 +134,45 @@ public class UserController {
         return r;
     }
 
+    //新增个人中心部分操作
+
+    //更改邮箱
+    @PostMapping("/setEmail")
+    @RequiresAuthentication
+    @LogAnnotation(module = "信息更改", operation = "设置邮箱")
+    public Result setEmail(@Validated @RequestBody User user) {
+
+        return updateUser(user);
+    }
+
+    @PostMapping("/setSchool")
+    @RequiresAuthentication
+    @LogAnnotation(module = "信息更改", operation = "设置学校")
+    public Result setSchool(@Validated @RequestBody User user) {
+
+        return updateUser(user);
+    }
+
+    @PostMapping("/setGrade")
+    @RequiresAuthentication
+    @LogAnnotation(module = "信息更改", operation = "设置年级")
+    public Result setGrade(@Validated @RequestBody User user) {
+
+        return updateUser(user);
+    }
+
+    @PostMapping("/setQQ")
+    @RequiresAuthentication
+    @LogAnnotation(module = "信息更改", operation = "设置QQ")
+    public Result setQQ(@Validated @RequestBody User user) {
+
+        return updateUser(user);
+    }
+
+    @PostMapping("/setWechat")
+    @RequiresAuthentication
+    @LogAnnotation(module = "信息更改", operation = "设置微信")
+    public Result setWechat(@Validated @RequestBody User user) {
+        return updateUser(user);
+    }
 }

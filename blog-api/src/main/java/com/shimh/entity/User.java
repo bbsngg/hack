@@ -99,6 +99,15 @@ public class User extends BaseEntity<Long> {
      */
     private Boolean deleted = Boolean.FALSE;
 
+    //属性：学校 年级 QQ 微信
+    private String school;
+
+    private String grade;
+
+    private String QQ;
+
+    private String wechat;
+
     public String getAccount() {
         return account;
     }
@@ -195,6 +204,38 @@ public class User extends BaseEntity<Long> {
         this.lastLogin = lastLogin;
     }
 
+
+    public String getSchool() {
+        return school;
+    }
+
+    public void setSchool(String school) {
+        this.school = school;
+    }
+
+    public String getGrade() {
+        return grade;
+    }
+
+    public void setGrade(String grade) {
+        this.grade = grade;
+    }
+
+    public String getQQ() {
+        return QQ;
+    }
+
+    public void setQQ(String QQ) {
+        this.QQ = QQ;
+    }
+
+    public String getWechat() {
+        return wechat;
+    }
+
+    public void setWechat(String wechat) {
+        this.wechat = wechat;
+    }
     @Override
     public String toString() {
         return "User [account=" + account + ", password=" + password + ", avatar=" + avatar + ", email=" + email
