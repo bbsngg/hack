@@ -3,9 +3,9 @@ package com.shimh.common.constant;
 /**
  * api接口返回 code和message
  *
- * @author shimh
+ * @author CSE
  * <p>
- * 2018年1月23日
+ * 2019年1月23日
  */
 public enum ResultCode {
 

@@ -17,9 +17,9 @@ import com.shimh.common.cache.RedisManager;
 /**
  * 将session保存到redis
  *
- * @author shimh
+ * @author CSE
  * <p>
- * 2018年1月23日
+ * 2019年1月23日
  */
 public class OAuthSessionDAO extends CachingSessionDAO implements InitializingBean {
 

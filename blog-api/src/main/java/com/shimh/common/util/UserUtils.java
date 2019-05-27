@@ -6,9 +6,9 @@ import com.shimh.common.constant.Base;
 import com.shimh.entity.User;
 
 /**
- * @author shimh
+ * @author CSE
  * <p>
- * 2018年1月25日
+ * 2019年1月25日
  */
 public class UserUtils {
 

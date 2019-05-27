@@ -6,9 +6,9 @@ import com.shimh.entity.Category;
 import com.shimh.repository.wrapper.CategoryWrapper;
 
 /**
- * @author shimh
+ * @author CSE
  * <p>
- * 2018年1月25日
+ * 2019年1月25日
  */
 public interface CategoryRepository extends JpaRepository<Category, Integer>, CategoryWrapper {
 

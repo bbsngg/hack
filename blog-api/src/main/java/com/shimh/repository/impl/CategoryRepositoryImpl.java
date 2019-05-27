@@ -15,9 +15,9 @@ import com.shimh.repository.wrapper.CategoryWrapper;
 import com.shimh.vo.CategoryVO;
 
 /**
- * @author shimh
+ * @author CSE
  * <p>
- * 2018年1月25日
+ * 2019年1月25日
  */
 public class CategoryRepositoryImpl implements CategoryWrapper {
 

@@ -15,9 +15,9 @@ import com.shimh.common.entity.BaseEntity;
 /**
  * 评论
  *
- * @author shimh
+ * @author CSE
  * <p>
- * 2018年1月30日
+ * 2019年1月30日
  */
 @Entity
 @Table(name = "me_comment")

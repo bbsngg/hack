@@ -4,9 +4,9 @@ package com.shimh.service;
 import com.shimh.entity.Log;
 
 /**
- * @author shimh
+ * @author CSE
  * <p>
- * 2018年4月18日
+ * 2019年4月18日
  */
 public interface LogService {
 

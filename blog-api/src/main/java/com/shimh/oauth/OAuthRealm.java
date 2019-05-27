@@ -24,9 +24,9 @@ import com.shimh.service.UserService;
 /**
  * 自定义shiroRealm
  *
- * @author shimh
+ * @author CSE
  * <p>
- * 2018年1月23日
+ * 2019年1月23日
  */
 public class OAuthRealm extends AuthorizingRealm {
 

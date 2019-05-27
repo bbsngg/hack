@@ -8,9 +8,9 @@ import com.shimh.entity.Article;
 import com.shimh.entity.Comment;
 
 /**
- * @author shimh
+ * @author CSE
  * <p>
- * 2018年1月25日
+ * 2019年1月25日
  */
 public interface CommentRepository extends JpaRepository<Comment, Integer> {
 

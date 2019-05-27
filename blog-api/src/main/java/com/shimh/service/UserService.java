@@ -5,9 +5,9 @@ import java.util.List;
 import com.shimh.entity.User;
 
 /**
- * @author shimh
+ * @author CSE
  * <p>
- * 2018年1月23日
+ * 2019年1月23日
  */
 public interface UserService {
 

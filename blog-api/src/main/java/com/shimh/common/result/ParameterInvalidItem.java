@@ -3,9 +3,9 @@ package com.shimh.common.result;
 /**
  * Controller参数校验 错误返回封装
  *
- * @author shimh
+ * @author CSE
  * <p>
- * 2018年1月23日
+ * 2019年1月23日
  */
 public class ParameterInvalidItem {
 

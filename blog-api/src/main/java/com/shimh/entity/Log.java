@@ -6,9 +6,9 @@ import javax.persistence.*;
 import java.util.Date;
 
 /**
- * @author shimh
+ * @author CSE
  * <p>
- * 2018年4月18日
+ * 2019年4月18日
  */
 @Entity
 @Table(name = "sys_log")

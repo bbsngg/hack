@@ -3,9 +3,9 @@ package com.shimh.entity;
 /**
  * 用户状态
  *
- * @author shimh
+ * @author CSE
  * <p>
- * 2018年1月23日
+ * 2019年1月23日
  */
 public enum UserStatus {
 

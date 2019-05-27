@@ -13,9 +13,9 @@ import com.shimh.oauth.OAuthSessionManager;
 /**
  * Session超时，通知前端删除token
  *
- * @author shimh
+ * @author CSE
  * <p>
- * 2018年1月30日
+ * 2019年1月30日
  */
 public class ClearTokenInteceptor extends HandlerInterceptorAdapter {
 

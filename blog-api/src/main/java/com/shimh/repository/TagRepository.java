@@ -10,9 +10,9 @@ import com.shimh.entity.Tag;
 import com.shimh.repository.wrapper.TagWrapper;
 
 /**
- * @author shimh
+ * @author CSE
  * <p>
- * 2018年1月25日
+ * 2019年1月25日
  */
 public interface TagRepository extends JpaRepository<Tag, Integer>, TagWrapper {
 

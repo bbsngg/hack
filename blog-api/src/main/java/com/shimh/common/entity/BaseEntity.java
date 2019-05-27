@@ -9,9 +9,9 @@ import java.io.Serializable;
 /**
  * 基础Entity
  *
- * @author shimh
+ * @author CSE
  * <p>
- * 2018年1月23日
+ * 2019年1月23日
  */
 @MappedSuperclass
 public abstract class BaseEntity<ID extends Serializable> implements Serializable {

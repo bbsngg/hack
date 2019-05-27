@@ -8,9 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * HttpServletRequest
  *
- * @author shimh
+ * @author CSE
  * <p>
- * 2018年4月18日
+ * 2019年4月18日
  */
 public class HttpContextUtils {
 

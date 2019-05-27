@@ -39,7 +39,10 @@ export function register(account, nickname, password) {
   })
 }
 
-export function setEmail(data){
+export function setEmail(email){
+  const data = {
+    email
+  }
   return request({
     url:'/users/setEmail',
     method:'post',

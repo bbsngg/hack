@@ -8,9 +8,9 @@ import com.shimh.vo.ArticleVo;
 import com.shimh.vo.PageVo;
 
 /**
- * @author shimh
+ * @author CSE
  * <p>
- * 2018年1月25日
+ * 2019年1月25日
  */
 public interface ArticleService {
 

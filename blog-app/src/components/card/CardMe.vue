@@ -26,7 +26,7 @@
         qq: {title: 'QQ', message: '919431514'},
         github: {
           title: 'github',
-          message: '<a target="_blank" href="https://github.com/shimh-develop">https://github.com/shimh-develop</a>'
+          message: '<a target="_blank" href="https://github.com/">https://github.com/</a>'
         }
       }
     },
