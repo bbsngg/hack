@@ -14,7 +14,7 @@
           <h1 class="me-view-title">{{article.title}}</h1>
           <div class="me-view-author">
             <a class="">
-              <img class="me-view-picture" :src="article.author.avatar"></img>
+              <img class="me-view-picture" :src="article.author.avatar">
             </a>
             <div class="me-view-info">
               <span>{{article.author.nickname}}</span>
@@ -57,13 +57,27 @@
             <!--<span style="font-weight: 600">{{article.category.categoryname}}</span>-->
             <el-button @click="tagOrCategory('category', article.category.id)" size="mini" type="primary" round plain>{{article.category.categoryname}}</el-button>
           </div>
+          
+
+          <div class="me-view-tag">
+            <el-link>本文关键词<br></el-link>
+            <el-link  href="https://element.eleme.io" target="_blank">默认链接</el-link>
+            <el-link  type="Primary">主要链接</el-link>
+            <el-link  type="Success">成功链接</el-link>
+            <el-link  type="Warning">警告链接</el-link>
+            <el-link  type="Danger">危险链接</el-link>
+            <el-link  type="Info">信息链接</el-link>
+          </div>      
+
+
+
 
           <div class="me-view-comment">
             <div class="me-view-comment-write">
               <el-row :gutter="20">
                 <el-col :span="2">
                   <a class="">
-                    <img class="me-view-picture" :src="avatar"></img>
+                    <img class="me-view-picture" :src="avatar">
                   </a>
                 </el-col>
                 <el-col :span="22">

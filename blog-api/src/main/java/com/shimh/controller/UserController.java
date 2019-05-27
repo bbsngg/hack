@@ -105,10 +105,10 @@ public class UserController {
     public Result updateUser(@RequestBody User user) {
         Result r = new Result();
 
-        if (null == user.getId()) {
-            r.setResultCode(ResultCode.USER_NOT_EXIST);
-            return r;
-        }
+//        if (null == user.getId()) {
+////            r.setResultCode(ResultCode.USER_NOT_EXIST);
+////            return r;
+////        }
 
         Long userId = userService.updateUser(user);
 
@@ -141,8 +141,11 @@ public class UserController {
     @RequiresAuthentication
     @LogAnnotation(module = "信息更改", operation = "设置邮箱")
     public Result setEmail(@Validated @RequestBody User user) {
-
-        return updateUser(user);
+        System.out.println(user.getEmail());
+        System.out.print("--------------------------------------------------------------------");
+        System.out.print(user);
+        return  null;
+//        return updateUser(user);
     }
 
     @PostMapping("/setSchool")
