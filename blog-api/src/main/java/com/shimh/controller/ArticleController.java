@@ -207,5 +207,17 @@ public class ArticleController {
         return Result.success(articleService.listArchives());
     }
 
+    @GetMapping("/getLinks/{id}")
+    @LogAnnotation(module = "文章", operation = "推荐相关连接")
+    public Result getLinksById(@PathVariable("id") Integer id) {
+
+        if (null == id) {
+            return Result.error(ResultCode.ERROR);
+        }
+
+        List<String> links = articleService.getLinksById(id);
+
+        return Result.success(links);
+    }
 
 }

@@ -42,4 +42,6 @@ public interface ArticleService {
 
     List<ArticleVo> listArchives();
 
+    List<String> getLinksById(Integer id);
+
 }

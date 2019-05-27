@@ -18,13 +18,13 @@ public class CategoryServiceTest extends BlogApiApplicationTests{
 	
 	
 	
-	@Test
-	public void findAllDetailTest() {
-		
-		List<CategoryVO> cs = categoryService.findAllDetail();
-				
-		cs.stream().forEach( c -> System.out.println(c.getCategoryname() + ":" + c.getArticles()));
-		System.out.println(cs.size());
-		
-	}
+//	@Test
+//	public void findAllDetailTest() {
+//
+//		List<CategoryVO> cs = categoryService.findAllDetail();
+//
+//		cs.stream().forEach( c -> System.out.println(c.getCategoryname() + ":" + c.getArticles()));
+//		System.out.println(cs.size());
+//
+//	}
 }

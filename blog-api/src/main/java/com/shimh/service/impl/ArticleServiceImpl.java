@@ -1,10 +1,19 @@
 package com.shimh.service.impl;
 
+import java.io.IOException;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import com.hankcs.hanlp.HanLP;
 import com.shimh.vo.ArticleVo;
 import com.shimh.vo.PageVo;
+import org.jsoup.Connection;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
@@ -144,4 +153,60 @@ public class ArticleServiceImpl implements ArticleService {
 
         return articleRepository.listArchives();
     }
+
+    @Override
+    public List<String> getLinksById(Integer id) {
+        Article article = articleRepository.getOne(id);
+        String content = article.getBody().getContent();
+
+        List<String> phraseList = HanLP.extractPhrase(content, 5);
+        List<String> linkList=new ArrayList<String>();
+        List<String> retLinks=new ArrayList<String>();
+//        System.out.println(phraseList);
+        for(int i=0;i<phraseList.size();i++){
+            String link="https://www.baidu.com/s?word="+phraseList.get(i);
+            linkList.add(link);
+            System.out.println(link);
+        }
+//        for(String url:linkList){
+//            getNews(url,3);
+//        }
+        for (int i=0;i <linkList.size();i ++){
+            String temp = linkList.get(i);
+            retLinks.add(temp+"@-@"+getNews(temp));
+        }
+        return retLinks;
+    }
+
+    private static String getNews(String url){
+        try{
+            Document doc= Jsoup.connect(url).get();
+            Element element=doc.getElementById("content_left");
+
+            Element result=element.getElementById(String.valueOf(1));
+            Elements add=result.select("a");
+            System.out.println(add.first().text());
+            String attr = add.first().attr("href");
+            System.out.println(attr);
+//                System.out.println(getRealUrlFromBaiduUrl(attr));
+            return getRealUrlFromBaiduUrl(attr);
+
+        }catch(IOException e){
+            e.printStackTrace();
+            return "";
+        }
+    }
+
+    private static String getRealUrlFromBaiduUrl(String url) {
+        Connection.Response res = null;
+        int itimeout = 60000;
+        try {
+            res = Jsoup.connect(url).timeout(itimeout).method(Connection.Method.GET).followRedirects(false).execute();
+            return res.header("Location");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
+
 }
