@@ -159,7 +159,7 @@ public class ArticleServiceImpl implements ArticleService {
         Article article = articleRepository.getOne(id);
         String content = article.getBody().getContent();
 
-        List<String> phraseList = HanLP.extractPhrase(content, 5);
+        List<String> phraseList = HanLP.extractPhrase(content, 6);
         List<String> linkList=new ArrayList<String>();
         List<String> retLinks=new ArrayList<String>();
 //        System.out.println(phraseList);

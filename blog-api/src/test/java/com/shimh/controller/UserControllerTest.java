@@ -47,8 +47,8 @@ public class UserControllerTest extends BlogApiApplicationTests{
 		u.setStatus(UserStatus.normal);
 
 //        MvcResult result =
-//				mockMvc.perform(post("/users/create").contentType(MediaType.APPLICATION_JSON).content(JSONObject.toJSONString(u)))
-//                .andExpect(status().isOk());// 模拟向testRest发送get请求
+				mockMvc.perform(post("/users/create").contentType(MediaType.APPLICATION_JSON).content(JSONObject.toJSONString(u)))
+                .andExpect(status().isOk());// 模拟向testRest发送get请求
 //                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))// 预期返回值的媒体类型text/plain;charset=UTF-8
 //                .andReturn();// 返回执行请求的结果
 
