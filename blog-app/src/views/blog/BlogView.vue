@@ -60,13 +60,13 @@
           
 
           <div class="me-view-tag">
-            <el-link>本文关键词<br></el-link>
-            <el-link  href="https://element.eleme.io" target="_blank">默认链接</el-link>
-            <el-link  type="Primary">主要链接</el-link>
-            <el-link  type="Success">成功链接</el-link>
-            <el-link  type="Warning">警告链接</el-link>
-            <el-link  type="Danger">危险链接</el-link>
-            <el-link  type="Info">信息链接</el-link>
+            <el-link id="keytag">本文关键词<br></el-link>
+            <el-link  href="https://element.eleme.io" target="_blank" id="key1">默认链接</el-link>
+            <el-link  type="Primary" id="key2">主要链接</el-link>
+            <el-link  type="Success" id="key3">成功链接</el-link>
+            <el-link  type="Warning" id="key4">警告链接</el-link>
+            <el-link  type="Danger" id="key5">危险链接</el-link>
+            <el-link  type="Info" id="key6">信息链接</el-link>
           </div>      
 
 
@@ -334,5 +334,27 @@
     background: #fff !important;
   }
 
+  #key2{
+    color:#409EFF;
+  }
 
+  #key3{
+    color: #67C23A;
+  }
+
+  #key4{
+    color: #E6A23C;
+  }
+
+  #key5{
+    color: #F56C6C;
+  }
+
+  #key6{
+    color:#909399;
+  }
+
+  #keytag{
+    font-size: 20px;
+  }
 </style>

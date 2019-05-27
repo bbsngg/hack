@@ -1,7 +1,7 @@
 import Vuex from 'vuex'
 import Vue from 'vue'
 import {getToken, setToken, removeToken} from '@/request/token'
-import {login, getUserInfo, logout, register} from '@/api/login'
+import {login, getUserInfo, logout, register,setEmail} from '@/api/login'
 
 Vue.use(Vuex);
 
@@ -129,5 +129,16 @@ export default new Vuex.Store({
       })
     },
     //个人中心设置
+    setEmail({commit},user){
+      return new Promise((resolve,reject) => {
+        setEmail(user.email).then((data)=>{
+          commit('SET_TOKEN',data.data['Oauth-Token'])
+          setToken(data.data['Oauth-Token'])
+          resolve()
+        }).catch((error) => {
+          reject(error)
+        })
+      })
+    },
   }
 })
