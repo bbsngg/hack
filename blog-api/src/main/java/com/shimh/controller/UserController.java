@@ -144,7 +144,14 @@ public class UserController {
         System.out.println(user.getEmail());
         System.out.print("--------------------------------------------------------------------");
         System.out.print(user);
-        return  null;
+//        return  null;
+        Result r = new Result();
+        Long userId = userService.updateUser(user);
+
+        r.setResultCode(ResultCode.SUCCESS);
+        r.simple().put("userId", userId);
+        return r;
+
 //        return updateUser(user);
     }
 

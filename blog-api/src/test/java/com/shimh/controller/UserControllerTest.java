@@ -57,26 +57,26 @@ public class UserControllerTest extends BlogApiApplicationTests{
 
 	}
 	
-//	@Test
-//	public void getUserById() throws Exception {
-//		Long id = 5L;
-//        MvcResult result = mockMvc.perform(get("/users/"+id))
-//                .andExpect(status().isOk())
-//                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
-//                .andReturn();
-//
-//        System.out.println(result.getResponse().getContentAsString());
-//	}
+	@Test
+	public void getUserById() throws Exception {
+		Long id = 5L;
+        MvcResult result = mockMvc.perform(get("/users/"+id))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andReturn();
+
+        System.out.println(result.getResponse().getContentAsString());
+	}
 	
-//	@Test
-//	public void findAllTest() throws Exception {
-//        MvcResult result = mockMvc.perform(get("/users/"))
-//                .andExpect(status().isOk())
-//                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
-//                .andReturn();
-//
-//        System.out.println(result.getResponse().getContentAsString());
-//	}
+	@Test
+	public void findAllTest() throws Exception {
+        MvcResult result = mockMvc.perform(get("/users/"))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andReturn();
+
+        System.out.println(result.getResponse().getContentAsString());
+	}
 	
 //	@Test
 //	public void updateUserTest() throws Exception {
