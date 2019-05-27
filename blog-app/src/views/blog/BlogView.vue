@@ -60,13 +60,13 @@
           
 
           <div class="me-view-tag">
-            <el-link id="keytag">本文关键词<br></el-link>
-            <el-link  href="https://element.eleme.io" target="_blank" id="key1">默认链接</el-link>
-            <el-link  type="Primary" id="key2">主要链接</el-link>
-            <el-link  type="Success" id="key3">成功链接</el-link>
-            <el-link  type="Warning" id="key4">警告链接</el-link>
-            <el-link  type="Danger" id="key5">危险链接</el-link>
-            <el-link  type="Info" id="key6">信息链接</el-link>
+            <el-link id="keytag">本文关键词及参考资料<br></el-link>
+            <el-link  target="_blank" id="key1">常规链接</el-link>
+            <el-link  target="_blank" type="Primary" id="key2">主要链接</el-link>
+            <el-link  type="Success" target="_blank" id="key3">成功链接</el-link>
+            <el-link  type="Warning" target="_blank" id="key4">警告链接</el-link>
+            <el-link  type="Danger" target="_blank" id="key5">危险链接</el-link>
+            <el-link  type="Info" target="_blank" id="key6">信息链接</el-link>
           </div>      
 
 
@@ -125,7 +125,7 @@
 <script>
   import MarkdownEditor from '@/components/markdown/MarkdownEditor'
   import CommmentItem from '@/components/comment/CommentItem'
-  import {viewArticle} from '@/api/article'
+  import {viewArticle,getkeys} from '@/api/article'
   import {getCommentsByArticle, publishComment} from '@/api/comment'
 
   import default_avatar from '@/assets/img/default_avatar.png'
@@ -137,6 +137,9 @@
     },
     watch: {
       '$route': 'getArticle'
+    },
+    mounted(){
+   
     },
     data() {
       return {
@@ -178,6 +181,35 @@
       }
     },
     methods: {
+      getkeys(id){
+        let that = this
+        getkeys(id).then(data => {
+
+          // Object.assign( data.data)
+          var links = data.data
+          console.log(links)
+          console.log(links.length)
+          var i=0
+          for (var it in links){
+            i=i+1
+            console.log(i)
+            console.log(links[i-1])
+            var temp = links[i-1].split("@")
+            document.getElementById("key"+i).href=temp[2]
+            document.getElementById("key"+i).innerHTML=temp[0].split("=")[1]
+          }
+          
+          console.log(links)
+          //this.articleForm.tags = tags
+
+
+        }).catch(error => {
+          if (error !== 'error') {
+            that.$message({type: 'error', message: '文章加载失败', showClose: true})
+          }
+        })
+      },
+
       tagOrCategory(type, id) {
         this.$router.push({path: `/${type}/${id}`})
       },
@@ -191,11 +223,15 @@
           that.article.editor.value = data.data.body.content
 
           that.getCommentsByArticle()
+          this.getkeys(this.article.id)
         }).catch(error => {
           if (error !== 'error') {
             that.$message({type: 'error', message: '文章加载失败', showClose: true})
           }
         })
+        
+      
+       
       },
       publishComment() {
         let that = this

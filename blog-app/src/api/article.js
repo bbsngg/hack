@@ -18,6 +18,13 @@ export function getArticles(query, page) {
   })
 }
 
+export function getkeys(id){
+  return request({
+    url:`/articles/getLinks/${id}`,
+    method:'get'
+  })
+}
+
 export function getHotArtices() {
   return request({
     url: '/articles/hot',
