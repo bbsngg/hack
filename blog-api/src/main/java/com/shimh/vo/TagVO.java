@@ -3,9 +3,9 @@ package com.shimh.vo;
 import com.shimh.entity.Tag;
 
 /**
- * @author shimh
+ * @author CSE
  * <p>
- * 2018年1月29日
+ * 2019年1月29日
  */
 public class TagVO extends Tag {
 

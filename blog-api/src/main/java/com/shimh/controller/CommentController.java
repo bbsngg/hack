@@ -30,9 +30,9 @@ import com.shimh.service.CommentService;
 /**
  * 评论api
  *
- * @author shimh
+ * @author CSE
  * <p>
- * 2018年1月25日
+ * 2019年1月25日
  */
 @RestController
 @RequestMapping(value = "/comments")

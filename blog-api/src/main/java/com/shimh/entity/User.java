@@ -19,9 +19,9 @@ import com.shimh.common.entity.BaseEntity;
 /**
  * 用户
  *
- * @author shimh
+ * @author CSE
  * <p>
- * 2018年1月23日
+ * 2019年1月23日
  */
 @Entity
 @Table(name = "sys_user")

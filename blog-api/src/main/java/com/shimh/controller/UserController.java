@@ -33,9 +33,9 @@ import com.shimh.service.UserService;
 /**
  * 用户api
  *
- * @author shimh
+ * @author CSE
  * <p>
- * 2018年1月23日
+ * 2019年1月23日
  */
 @RestController
 @RequestMapping(value = "/users")

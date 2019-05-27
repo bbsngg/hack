@@ -29,9 +29,9 @@ import com.shimh.service.UserService;
 /**
  * 登录
  *
- * @author shimh
+ * @author CSE
  * <p>
- * 2018年1月23日
+ * 2019年1月23日
  */
 @RestController
 public class LoginController {

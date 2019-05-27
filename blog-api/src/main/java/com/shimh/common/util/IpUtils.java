@@ -8,9 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * 获取Ip
  *
- * @author shimh
+ * @author CSE
  * <p>
- * 2018年4月18日
+ * 2019年4月18日
  */
 public class IpUtils {
     private static Logger LOG = LoggerFactory.getLogger(IpUtils.class);

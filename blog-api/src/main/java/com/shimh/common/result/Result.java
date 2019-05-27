@@ -9,9 +9,9 @@ import com.shimh.common.constant.ResultCode;
 /**
  * api接口数据返回封装
  *
- * @author shimh
+ * @author CSE
  * <p>
- * 2018年1月23日
+ * 2019年1月23日
  */
 public class Result implements Serializable {
 

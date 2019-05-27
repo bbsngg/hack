@@ -3,9 +3,9 @@ package com.shimh.common.constant;
 /**
  * 系统基础常量
  *
- * @author shimh
+ * @author CSE
  * <p>
- * 2018年1月23日
+ * 2019年1月23日
  */
 public class Base {
 
