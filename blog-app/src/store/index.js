@@ -11,6 +11,11 @@ export default new Vuex.Store({
     account: '',
     name: '',
     avatar: '',
+    email:'',
+    qq:'',
+    wechat:'',
+    school:'',
+    grade:'',
     token: getToken(),
   },
   mutations: {
@@ -28,6 +33,21 @@ export default new Vuex.Store({
     },
     SET_ID: (state, id) => {
       state.id = id
+    },
+    SET_SCHOOL: (state, school) => {
+      state.school = school
+    },
+    SET_GRADE: (state, grade) => {
+      state.grade = grade
+    },
+    SET_EMAIL: (state, email) => {
+      state.email = email
+    },
+    SET_QQ: (state, qq) => {
+      state.qq = qq
+    },
+    SET_WECHAT: (state, wechat) => {
+      state.wechat = wechat
     }
   },
   actions: {
@@ -107,6 +127,7 @@ export default new Vuex.Store({
           reject(error)
         })
       })
-    }
+    },
+    //个人中心设置
   }
 })

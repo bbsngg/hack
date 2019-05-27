@@ -12,8 +12,13 @@ import '@/assets/theme/index.css'
 
 import '@/assets/icon/iconfont.css'
 
+import Axios from 'axios'
+
 import {formatTime} from "./utils/time";
 
+
+Vue.prototype.$axios = Axios
+Vue.prototype.HOST = '/'
 
 Vue.config.productionTip = false
 

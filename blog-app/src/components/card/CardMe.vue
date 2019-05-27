@@ -1,9 +1,9 @@
 <template>
   <el-card>
-    <h1 class="me-author-name">shimh</h1>
+    <h1 id="name" class="me-author-name">{{shimh}}</h1>
     <div class="me-author-description">
-      <span><i class="el-icon-location-outline"></i> &nbsp;山东&济南</span>
-      <span><i class="me-icon-job"></i> &nbsp;java开发工程师</span>
+      <span id="school"><i class="el-icon-location-outline"></i> &nbsp;{{school}}</span>
+      <span id="grade"><i class="me-icon-job"></i> &nbsp;{{grade}}</span>
     </div>
     <div class="me-author-tool">
       <i @click="showTool(qq)" :title="qq.title" class="me-icon-QQ"></i>
@@ -16,14 +16,22 @@
 <script>
   export default {
     name: 'CardMe',
+   
     data() {
       return {
+ 
+        shimh:this.$store.state.name,
+        school:"南京大学",
+        grade:"大二",
         qq: {title: 'QQ', message: '919431514'},
         github: {
           title: 'github',
           message: '<a target="_blank" href="https://github.com/shimh-develop">https://github.com/shimh-develop</a>'
         }
       }
+    },
+    mounted(){
+     
     },
     methods: {
       showTool(tool) {
@@ -34,6 +42,7 @@
           message: '<strong>' + tool.message + '</strong>'
         });
       }
+
     }
   }
 </script>

@@ -38,3 +38,11 @@ export function register(account, nickname, password) {
     data
   })
 }
+
+export function setEmail(data){
+  return request({
+    url:'/users/setEmail',
+    method:'post',
+    data
+  })
+}

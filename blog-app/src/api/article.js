@@ -74,4 +74,5 @@ export function getArticleById(id) {
     url: `/articles/${id}`,
     method: 'get'
   })
+
 }
